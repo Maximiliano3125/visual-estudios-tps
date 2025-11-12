@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
+    <title>Click Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,11 +18,24 @@
     </nav>
 
     <div class="contenido">
-        <h1>Hola</h1>
+        <div class="panel-juego">
+            <h2>Puntaje: <span id="puntaje">0</span></h2>
+            <p>Puntaje más alto: <span id="record">0</span></p>
+            <p>Tiempo: <span id="tiempo">10</span> segundos</p>
+            <input type="button" value="Iniciar juego" onclick="iniciarJuego()">
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+
+        <div class="instrucciones">
+            <h3>Instrucciones</h3>
+            <p>- Haz clic <b>izquierdo</b> en los círculos <span style="color:red;">rojos</span> para ganar puntos.</p>
+            <p>- Haz clic <b>derecho</b> en los círculos <span style="color:blue;">azules</span> para ganar puntos.</p>
+            <p>- Si haces clic equivocado, <b>pierdes puntos</b>.</p>
+        </div>
     </div>
 
     <footer class="footer">
-    <p>© 2025 Mi Proyecto - Todos los derechos reservados.</p>
+        <p>© 2025 Mi Proyecto - Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>

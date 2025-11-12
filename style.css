@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
   background-color: white;
   color: black;
@@ -22,10 +21,6 @@ body {
   box-sizing: border-box;
 }
 
-.navbar h2 {
-  margin: 0;
-}
-
 .navbar ul {
   list-style: none;
   display: flex;
@@ -40,10 +35,6 @@ body {
   font-weight: bold;
 }
 
-.navbar ul li a:hover {
-  text-decoration: underline;
-}
-
 #modoOscuroBtn {
   background-color: lightgray;
   border: none;
@@ -53,11 +44,61 @@ body {
   font-weight: bold;
 }
 
-#modoOscuroBtn:hover {
-  background-color: gray;
-  color: white;
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+  padding-bottom: 100px;
 }
 
+.panel-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-juego input[type="button"] {
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #ddd;
+  transition: 0.3s;
+}
+
+.panel-juego input[type="button"]:hover {
+  background-color: #bbb;
+}
+
+.instrucciones {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+.instrucciones h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* 🌙 Modo oscuro */
 body.oscuro {
   background-color: #121212;
   color: white;
@@ -67,48 +108,45 @@ body.oscuro .navbar {
   background-color: #111;
 }
 
-body.oscuro .navbar ul li a {
+body.oscuro .instrucciones {
+  background-color: #222;
   color: #ccc;
 }
 
-body.oscuro #modoOscuroBtn {
-  background-color: #444;
-  color: white;
+body.oscuro .footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+#canvas {
+  background-color: #e6e6e6;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+}
+
+body.oscuro #canvas {
+  background-color: #333;
+  border-color: #555;
 }
 
 .contenido {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 100px;
 }
 
-.footer {
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+.instrucciones {
+  width: 250px;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
-body.oscuro .footer {
-  background-color: #111;
-  color: #ccc;
-}
-.footer {
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-body.oscuro .footer {
-  background-color: #111;
-  color: #ccc;
+body.oscuro .instrucciones {
+  background-color: #1e1e1e;
+  border-color: #444;
 }
